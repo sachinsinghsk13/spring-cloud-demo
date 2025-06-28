@@ -1,3 +1,8 @@
 spring:
   application:
     name: product_catalogue_service
+  profiles:
+    active:
+      - dev
+  config:
+    import: configserver:http://localhost:8888
