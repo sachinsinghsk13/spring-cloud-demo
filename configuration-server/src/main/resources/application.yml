@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: configuration_server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///home/sachinsingh/Projects/spring-cloud-demo-config
+          default-label: master
+          search-paths: "{application}"
+          clone-on-start: true
+# Server Config
+server:
+  port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
