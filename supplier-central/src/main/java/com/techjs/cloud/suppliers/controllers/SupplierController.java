@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/suppliers")
+@RequestMapping
 public class SupplierController {
 
     private final SupplierService service;
