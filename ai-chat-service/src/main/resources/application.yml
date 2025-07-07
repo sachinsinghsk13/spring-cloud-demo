@@ -1,8 +1,10 @@
 spring:
   application:
-    name: gateway_service
+    name: ai_chat_service
   profiles:
     active:
       - dev
   config:
     import: configserver:http://localhost:8888
+server:
+  port: 8900

@@ -2,6 +2,7 @@ package com.techjs.cloud.suppliers.services;
 
 import com.techjs.cloud.suppliers.entities.Supplier;
 import com.techjs.cloud.suppliers.repositories.SupplierRepository;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class SupplierService {
         return repository.save(supplier);
     }
 
+    @Cacheable("suppliers")
     public List<Supplier> getAllSuppliers() {
         return repository.findAll();
     }
